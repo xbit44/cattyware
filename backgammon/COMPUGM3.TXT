@@ -1,0 +1,105 @@
+                                        Montreal November 11, 1992
+
+        Hi Chris,
+
+        After struggling for some time, I finally managed the program
+        to work. I noticed that when I play locally against the computor
+        the board is not upside down. But When I am playing against
+        a caller, my board is still upside down whereas his board is
+        normal. Is it possible to fix this problem ? or is it that one
+        side has to play with a reversed board all the time? I would
+        appreciate your comment on this.
+
+        Now, here is a recap of what I told you on the phone:-
+
+        1. If a player can move the values of both dice before making
+        his first move, he should not be allowed to make his first move
+        thus not being able to play his second move.
+
+        Here is an example:
+  	 				                                     
+        X   W   V   U   T   S           R   Q   P   O   N   M      
+(-)  ษอออออออออออออออออออออออออหอออออหอออออออออออออออออออออออออหอออป        
+HOME บ                 (-) (-) บ     บ     (-)                 บ Z บ    (*)
+     บ                 (-) (-) บ     บ     (-)                 บ   บ  To Play
+     บ                 (-) (-) บ     บ     (-)                 บ   บ ษอออออออป
+     บ                 (-) (-) บ     บ                         บ O บ บ o   o บ
+ฺฤฤฤฟบ                 (-) (-) บ     บ                         บ   บ บ o   o บ
+ณ 1 ณบ                         บ BAR บ                         บ F บ บ o   o บ 
+ภฤฤฤูบ                         บ     บ                         บ   บ ศอออออออผ
+     บ                         บ     บ                         บ F บ ษอออออออป
+     บ                         บ     บ                         บ   บ บ o   o บ
+(*)  บ (-)             (*) (*) บ     บ (*)                     บ   บ บ   o   บ
+HOME บ (-)             (*) (*) บ     บ (*)                 (*) บ Z บ บ o   o บ
+     ศอออออออออออออออออออออออออสอออออสอออออออออออออออออออออออออผอออผ ศอออออออผ
+        A   B   C   D   E   F           G   H   I   J   K   L  	  
+
+        (*) Rolls 6-5 - According to your program he is able to
+            play the 5  L to G and then he has no valid moves
+            According to Backgammon rules he is not allowed to do this.
+            because he should play first the 6 L to F and then
+            the  5 G to B. That means the prog should check all the
+            available moves before letting player make his move. This
+            applies to the Sysop also as well as to the computor.
+
+        2. The players should have the option to play the game in either
+           of the following modes which could be agreed upon before
+           start of the game (like a button that toggles)
+
+           Mode 1: When a move is made it is considered final.
+
+           Mode 2: When the move for the second die is made, then
+                   the program should ask if this is final (y/n)
+                   and if the player presses "y" or ENTER then the
+                   2 moves become final. But if he presses "N" then
+                   all his moves are taken back and he starts from
+                   his initial position. This should also aplly to the
+                   Sysop but definitely not to the computor. As I told
+                   you on the phone the American way is mode 2, whether
+                   it is a friendly game, game for money or major
+                   tournment. Whereas the Middle East people mostly play
+                   Mode 1.
+
+          3. When a board is blocked and the opponent has a man or more
+             on the BAR, there is no need for the opponent to roll the
+             dice, as it could be a waste of time.
+
+          4. When playing against the computor, if the caller can
+          control somehow the speed of the computor's moves so he can
+          see the dice rolled and the moves made by the computor.
+
+          5. Finally we spoke about the arrow direction like the Right
+             arrow would move all the way clockwise and the Left arrow
+             would move all the way anti-clockwise.
+
+         In the meantime, if you could fix the board for the sysop
+         provided Sysop and caller will have their Homes in the Bottom
+         left quadrant, I would very much appreciate it. If it is
+         impossible to fix this problem then I'll have to play my games
+         on a reversed board which is rather difficult to visualize
+         the board and the moves.
+
+         Here are 2 Bugs that I noticed while playing with a friend of
+         mine.
+
+         A) Everytime we start a new game, the caller's screen is still
+            showing the men of the previous game (in a shadow form of
+            colour). So when he pressed (R)efresh then the Screen became
+            normal. I tought you should know about this.
+
+         B) Everytime that I was pressing F2 to increase Time Left, for
+         some reason, the colours of the men were changing. Also you
+         would see on the same point men on top of each other of
+         different colors. It also happened that Sysop lost a couple of
+         turns while the caller played an extra of a couple of turns.
+         This description is to the best of my knowledge. I think it
+         would be a good idea if you tried it yourself and see exactly
+         what is happening.
+
+         I'll start preparing you some docs for the Doubling Cube,
+         scoring, rules of backgammon, first moves for the computor,
+         computor's reply for caller's first moves, and more.. :)
+
+         Good luck in your achievements and take care..... J.L.
+
+

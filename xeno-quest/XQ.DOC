@@ -1,0 +1,219 @@
+
+                           XENO-QUEST Ver. 1.42
+                               Jan 1, 1993
+
+                       Neubauer Applications Uncorp.
+                             P.O. Box 1446
+                          Corpus Christi, Texas
+                            78403-1446  U.S.A.
+
+                     Originated from Virtual Reality BBS
+                           of Corpus Christi, Tx
+                         BBS phone : 512-992-4496
+
+                            Setup of XENO-QUEST
+
+
+   Feel free to distributed this software any where.  This is a Working
+   Version of XENO-QUEST... There are No Shareware screens or delays.
+   All I ask is that you keep the Original Files in tact and distribute
+   them as a package.
+
+   Warranty : There is NO Warranty.
+
+   If you would like the newest release of this game, Just Call the
+   Virtual Reality BBS to find out what the latest revision is
+   and how much it's going for.
+
+   If you need help or a modification to the existing program so that it will
+   run on your BBS.. just Call and leave a message on my BBS.. and I'll try
+   to get back with you as soon as I can..
+
+   To REGISTER your copy for your BBS simply Send a Donation of $25.00 in
+   U.S. Dollars to :
+
+                       Chris Neubauer
+                       P.O. Box 1446
+                       Corpus Christi, Texas  78403-1446
+
+   Along with the following information;
+
+        Your Name      _________________________
+        Your BBS Name  _________________________
+        Your address   _________________________
+        Your BBS Phone _________________________
+        The Version Number of XENO-QUEST that you have  ______.
+
+
+   Please Allow at least 3 weeks for delivery.
+
+   Add $5.00 if you want the newest release sent Uploaded to your BBS or
+   Sent on disk to you.. (state 5.25" or 3.5" disks).
+   Otherwise you will receive your registration code only..
+
+
+  SysOp Information:
+
+       XENO-QUEST Should Run on almost any BBS.. given the right data
+       in the configuration file..
+
+       The Following Files Should be in the same directory as XQ.EXE :
+
+                     PLYRFILE.DTA <---- if missing XQ.exe Will Create.
+                     Monster.DTA  <---- if missing XQ.exe Will Create.
+                     Items.DTA    <---- if missing XQ.exe Will Create.
+                     XQ.CFG       <---- Modify this file for your BBS.
+                     XQ.DOC       <---- The file your reading now.
+                     XQ.EMU       <---- Ansi Protocol for Xeno-Quest.
+                     XQ.EXE       <---- Main Executable file.
+                     XQ.SCR       <---- Data file For XENO-Quest
+                     XQ.DTA       <---- Data file For XENO-Quest
+                     XQLEVEL.DTA  <---- Data file For XENO-Quest
+                     XQMAP.DTA    <---- Data file For XENO-Quest
+                     XQ.INS       <---- Instructions for XENO-Quest
+                     SETUP.EXE    <---- Setup/Install program for XENO-Quest
+
+
+ Running XENO-QUEST in Local mode :
+
+       You may run XENO-QUEST in the Local mode by typing the following
+       at the DOS prompt:
+
+          C:>XQ Your Name
+
+       Any parameters are passed to XENO-Quest are assumed to be the player's
+       name.
+
+        There should be No Need to have an Ansi Driver Loaded.
+
+   Note : if any parameters are passed to XENO-QUEST it will assume Local
+          Mode and won't work on your BBS in remote mode.
+
+
+ Running XENO-Quest on your BBS :
+
+       To run XENO-Quest on your BBS you will need to know what your
+       BBS uses as a user file that is "DORINFO1.DEF", "CALLINFO.BBS"
+       "USERFILE" etc..  If you don't Know What line numbers that your
+       userfile uses for User's first names and Last names and Baud
+       Rates, You'll need to look at them using a text editor and figure
+       out which line has this information..
+
+
+
+                          USING THE SETUP PROGRAM
+
+       Use the Setup.exe program to Modify the Configuration file for
+       XENO-Quest. If Your BBS uses Chain.txt or Dorinfo1.def for Door
+       files then the  Setup program has defaults which it will automatically
+       enter for the line numbers of where to find the users data.  Just type in
+       either Dorinfo1.def or chain.txt on the line labeled "USERFile Name".
+       and SETUP will display the default line numbers.
+
+       If your userfile is not a text file, that is, a binary file or
+       or something else then you might try using QKDOOR.EXE to convert
+       your user file into a text type file.
+
+       If your userfile has a Time left line and a Time Limit Line
+       then XENO-Quest will use that information if you tell it
+       where to find it..
+
+ NEW:    XENO-Quest Now supports Systems that use Chain.Txt user file.
+       for reading the amount of time a user has left..(in Seconds).
+
+       Simply plug in the appropriate information in the Setup Program,
+       save the data,  set up your batch file or whatever it is that you
+       do to run a door.. and your all set.
+
+       XENO-Quest will run on a multi-node system provided that there are no
+       other copies of XENO-Quest running in memory that use the same interrupts.
+       It has been tested running on com1 and com2 simultaneously and on com3
+       and com4 simultaneously.. however if you try to run on com1 and on com3
+       at the same time, interrupt conflicts may occur if your multitasking
+       software does not provide for shared interrupts.
+
+       If You have Registered XENO-Quest with the Author (me), It is very
+       important to make sure that the upper and lower case letters are
+       correct in your registration number.
+
+       XENO-Quest will detect a Carrier Loss and return to the system.
+       It will update the players Status in the player data file.
+
+       If you find that you need XENO-Quest to perform some specific
+       tasks on exit, Let me know what it is and we'll make it do what
+       you need it to.
+
+       XENO-Quest can keep track of up to 100 players at a time, and
+       requires no events to be run and NO Maintenence.
+
+Sample Door Batch File:
+=======================
+
+Rem      Batch file for the XENO-Quest Door
+Rem
+@echo off
+cd\BBS
+cd\doors\XQ
+XQ             <------ Note : No Parameters....
+cd\BBS
+BBSLoad.bat         <------ batch file to reload BBS
+
+Sample XENO-Quest.CFG: (uses chain.txt userfile)
+==================
+123456789                   <------ Registration Number
+1                           <------ Comm port number
+2400                        <------ baud rate
+Mickey Mouse SysOp          <------ SysOp's Name
+Pluto's BBS                 <------ BBS Name
+C:\WWIV                     <------ Directory of BBS (dorinfo, Chain.txt, etc)
+Chain.Txt                   <------ Name of Userfile (dorinfo1.def etc)
+2                           <------ Line number of user first name
+2                           <------ Line number of user last name
+20                          <------ Line number of user baud rate
+16                          <------ Line number of user time limit for XQ
+0 0                         <------ Line number of user time used (0 0 =None)
+0                           <------ Don't Use RTS handshaking.
+0                           <------ Don't Use CTS handshaking.
+***************************************************************************
+
+
+Sample XENO-Quest.CFG: (uses dorinfo1.def userfile)
+==================
+12345678                    <------ Top line Registration Number (Line 1)
+2                           <------ Number of Comm port
+9600                        <------ Baud Rate
+Chris Neubauer              <------ SySop Name
+Virtual Reality             <------ BBS Name
+C:\MyBBS                    <------ BBS Directory
+Dorinfo1.def                <------ Name Of BBS Caller Info file
+7                           <------ Line Number Of User's First Name
+8                           <------ Line Number Of User's Last Name
+5                           <------ Line Number Of User's Baud Rate
+12                          <------ Time Limit line (or time left in Minutes)
+0 0                         <------ Time Used Line
+1                           <------ Use RTS handshaking.
+1                           <------ Use CTS handshaking.
+
+DORINFO1.DEF from Your BBS directory:
+========================================
+
+Your BBS Name Would be here.
+Your/SysOp First Name
+Your/SysOp Last Name
+COM2
+0 BAUD,N,8,1
+0
+User First Name
+User Last Name
+ANYTOWN, USA
+2
+100
+59
+
+*******************************************************************************
+
+       I hope you enjoy playing XENO-Quest..
+
+
+
+ end of document.

@@ -1,0 +1,43 @@
+
+                                  Montreal, Dec 1 1992   Msg #7
+        Hi Chris,
+
+        I was playing to-day for the first time with v.251 and I noticed
+        a new bug that came about after the modification.
+        When the inner board is blocked with 6 points and the opponent
+        has one or more men on the bar, he should not roll and he should
+        get "No Valid Moves". This part is working O.K. but it so
+        happened that there were no men on the bar but because the
+        player had 6 points blocked on his side, the opponent was not
+        able to play as he was getting the "no valid moves" even though
+        he could play the move. The following diagram will demonstrate
+        the problem:-
+
+                                                                     
+        X   W   V   U   T   S           R   Q   P   O   N   M      
+(-)  ษอออออออออออออออออออออออออหอออออหอออออออออออออออออออออออออหอออป        
+HOME บ (*) (-) (-) (-) (-) (-) บ     บ (-)         (-)         บ Z บ
+     บ (*) (-) (-) (-) (-) (-) บ     บ (-)                     บ   บ
+     บ                         บ     บ                         บ   บ
+     บ                         บ     บ                         บ O บ
+ฺฤฤฤฟบ                         บ     บ                         บ   บ
+ณ 1 ณบ                         บ BAR บ                         บ F บ
+ภฤฤฤูบ                         บ     บ                         บ   บ
+     บ                 (*)     บ     บ                         บ F บ
+     บ     (*) (*) (*) (*)     บ     บ                         บ   บ
+(*)  บ     (*) (*) (*) (*)     บ     บ                         บ   บ
+HOME บ     (*) (*) (*) (*)     บ     บ         (-)     (-)     บ Z บ
+     ศอออออออออออออออออออออออออสอออออสอออออออออออออออออออออออออผอออผ
+        A   B   C   D   E   F           G   H   I   J   K   L
+
+      (-) has 6 points blocked, 5 in the inner board and one on
+      his 7 point. He is blocking 2 of (*) men.
+
+      (*) has got 2 men blocked on the enemy side.and 13 men in his
+      inner board, and had no men on the bar. But was not allowed to
+      roll the dice (because (-) had 6 points block). He should be able
+      to roll and if possible make his moves in his inner board.
+
+      I hope I made myself clear.
+
+      Take care and good luck..... J.L.
